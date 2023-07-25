@@ -1,0 +1,12 @@
+# In proxmox open shell 
+apt update -y
+apt install cifs-utils -y
+mkdir /media/<some folder>
+# In the nano editor provide credentials
+nano ~/.smb
+  username=<some-user>
+  password=<user-password>
+# place smb share location in /etc/fstab
+nano /etc/fstab
+//<NAS_IP_ADDR/SHARE> </media/<some folder> cifs credentials=root/.smb,users,rw,iocharset=utf8
+mount -a
