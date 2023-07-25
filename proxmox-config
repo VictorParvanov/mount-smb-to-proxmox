@@ -8,5 +8,5 @@ nano ~/.smb
   password=<user-password>
 # place smb share location in /etc/fstab
 nano /etc/fstab
-//<NAS_IP_ADDR/SHARE> </media/<some folder> cifs credentials=root/.smb,users,rw,iocharset=utf8
+//<NAS_IP_ADDR/SHARE> </media/<some folder> cifs credentials=/root/.smb,users,rw,iocharset=utf8
 mount -a
